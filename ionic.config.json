@@ -1,0 +1,8 @@
+{
+  "name": "digiapp",
+  "app_id": "4f8155f5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
