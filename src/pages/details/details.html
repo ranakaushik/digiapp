@@ -1,0 +1,87 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-header>
+      <ion-navbar>
+        <ion-title class="head">
+          Name:{{droplets.name}}
+        </ion-title>
+      </ion-navbar>
+    </ion-header>
+
+   <ion-card style="margin-top: 32px">
+      <ion-item>
+          ID:{{droplets.id}}
+      </ion-item>
+  </ion-card>
+
+<ion-card >
+    <ion-item>
+       IP:{{droplets.networks.v4[0].ip_address}}
+    </ion-item>
+</ion-card>
+<ion-card >
+    <ion-item>
+       Memory:{{droplets.memory}}
+    </ion-item>
+</ion-card>
+
+<ion-card >
+    <ion-item>
+        Vcpus:{{droplets.vcpus}}
+    </ion-item>
+</ion-card>
+
+<ion-card >
+    <ion-item>
+        Disk:{{droplets.disk}}
+    </ion-item>
+</ion-card>
+
+<ion-card >
+    <ion-item>
+      <p>Region: {{droplets.region.name}}</p> 
+      <p>Slug:{{droplets.region.slug}}</p>
+    </ion-item>
+</ion-card>
+
+<ion-card >
+    <ion-item>
+        Tags:{{droplets.tags}}
+    </ion-item>
+</ion-card>
+
+<ion-card >
+    <ion-item>
+        status:{{droplets.status}}
+    </ion-item>
+</ion-card>
+
+<ion-card >
+  <button ion-item (click)="doSelectsize(droplet)">
+    SIZE
+  </button>
+</ion-card>
+<!--
+<ion-card >
+  <button ion-item  (click)="doSelectfeature(droplet)">
+    FEATURE
+  </button> 
+</ion-card>-->
+
+ 
+
+</ion-content>

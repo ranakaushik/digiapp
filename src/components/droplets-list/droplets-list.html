@@ -1,0 +1,11 @@
+<ion-list>
+  <button ion-item *ngFor="let droplet of droplets" (click)="doSelection(droplet)" >
+    <ion-icon name="water" item-start></ion-icon>
+    <h2>
+      <b>{{droplet.name}}</b>
+    </h2>
+    <h3>{{droplet.memory}} | {{droplet.vcpus}} | {{droplet.disk}} | {{droplet.region.slug}}</h3>
+    <p>{{droplet.tags}}</p>
+    <ion-note item-end >{{droplet.networks.v4[0].ip_address}} </ion-note>
+  </button>
+</ion-list>
